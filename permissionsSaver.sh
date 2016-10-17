@@ -1,4 +1,9 @@
 #!/bin/bash
+#Manvir Grewal : 10193283
+#Aiden Polese : 10197342
+#Kathleen Abols : 10179548
+#A Script that saves current permissions of all files/subdirs etc.. into a savedPermissions file - to be used with permissionsResetter.sh
+
 
 #identify most recent savedPermissions file and record the number
 latestPerm(){
@@ -10,13 +15,6 @@ latestPerm(){
         done	
 	echo "$i"
 }
-
-
-	#touch currentPerms
-	#for files in *;do
-	#	stat -f "%Lp %N" $files  >> currentPerms
-	#done
-
 
 
 #creates a new savedPermission file everytime it is run suffix added: 1,2,3...
@@ -35,4 +33,4 @@ fi
 
                
            
-ls -lR | awk '{print $1" "$NF}'| grep -v ^t > savedPermissions$(latestPerm)
+ls -lR | grep -v ^.: | grep -v ^t | awk '{print $1" "$NF}' | grep -v "./"> savedPermissions$(latestPerm)
