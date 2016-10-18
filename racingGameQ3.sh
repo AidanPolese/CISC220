@@ -1,9 +1,8 @@
-#!/bin/bash
 #Manvir Grewal : 10193283
 #Aiden Polese : 10197342
 #Kathleen Abols : 10179548
 
-echo This is a racing game, press 1,2 or 3 to move the arrows.
+echo "This is a racing game, press 1,2 or 3 to move the arrows."
 
 count1=0
 count2=0
